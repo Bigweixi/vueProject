@@ -70,10 +70,10 @@ export default {
   },
   created() {
     Axios("https://renwei.vip/api/getHomeData").then((res) => {
-      console.log(res.data);
-      this.images = res.data.banner.list;
-      this.recommend = res.data.recommend.list;
-      this.keywords = res.data.keywords.list;
+      let data = json.parse(res);
+      this.images = data.data.banner.list;
+      this.recommend = data.data.recommend.list;
+      this.keywords = data.data.keywords.list;
     });
   },
 };
