@@ -70,7 +70,7 @@ export default {
   },
   created() {
     Axios("https://renwei.vip/api/getHomeData").then((res) => {
-      let data = json.parse(res);
+      let data = JSON.parse(res);
       this.images = data.data.banner.list;
       this.recommend = data.data.recommend.list;
       this.keywords = data.data.keywords.list;
