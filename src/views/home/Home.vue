@@ -69,7 +69,7 @@ export default {
     },
   },
   created() {
-    Axios("http://123.207.32.32:8000/home/multidata").then((res) => {
+    Axios("https://renwei.vip/api/getHomeData").then((res) => {
       console.log(res.data);
       this.images = res.data.banner.list;
       this.recommend = res.data.recommend.list;
